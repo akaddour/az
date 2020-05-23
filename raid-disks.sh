@@ -28,6 +28,7 @@ do
 	(echo n; echo p; echo 1; echo ; echo ; echo p; echo t; echo fd; echo p; echo w;) | fdisk ${disk} 
 done
 eval "$RAID_CMD"
+sleep 5
 mkfs.ext4 /dev/md1 
 sudo mkdir /mnt/raid1
 sudo mount /dev/md1 /mnt/raid1
