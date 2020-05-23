@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get update -y
+
 apt-get install mdadm -y --no-install-recommends
 cp /etc/fstab /etc/fstab.original
 # udev rules for Azure storage devices https://github.com/Azure/WALinuxAgent/blob/develop/config/66-azure-storage.rules
