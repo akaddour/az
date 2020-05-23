@@ -10,7 +10,7 @@ do
 	attached="${attached/$i/}"
 done
 i=0
-RAID_CMD="mdadm --create --verbose /dev/md1 --level 0 --raid-devices "
+RAID_CMD="mdadm --create --verbose --level=mirror /dev/md1 --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $attached
 do
