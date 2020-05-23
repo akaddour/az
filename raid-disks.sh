@@ -29,4 +29,5 @@ done
 eval "$RAID_CMD"
 mkfs.ext4 /dev/md1 
 sudo mkdir /mnt/raid1
+sudo mount /dev/md1 /mnt/raid1
 mount -a
