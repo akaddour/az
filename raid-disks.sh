@@ -10,7 +10,7 @@ do
 	attached="${attached/$i/}"
 done
 i=0
-RAID_CMD="mdadm --create /dev/md1 --level 0 --raid-devices "
+RAID_CMD="mdadm --create --verbose /dev/md1 --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $attached
 do
@@ -21,6 +21,7 @@ do
 done
 RAID_CMD+=$i
 RAID_CMD+=$RAID_DISKS
+sleep 5
 for d in $attached 
 do
 	disk="/dev/${d}"
