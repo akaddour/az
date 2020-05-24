@@ -46,7 +46,7 @@ fi
 enoughDisks
 md=9
 i=0
-RAID_CMD="mdadm --create /dev/md${md} --level 0 --raid-devices "
+RAID_CMD="mdadm --create /dev/md$md --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $toRaid
 do
