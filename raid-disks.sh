@@ -44,8 +44,14 @@ fi
 
 }
 enoughDisks
-md=9
-i=0
+
+md=0
+mdexist=0
+while [[ "$mdexist" == "0" ]]
+do
+    test -d "/dev/md$md" && md=$((md+1)) || mdexist="1"
+done
+
 sudo mkdir -p /dev/md${md}
 RAID_CMD="mdadm --create /dev/md$md --level 0 --raid-devices "
 RAID_DISKS=""
