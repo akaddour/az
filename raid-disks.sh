@@ -52,7 +52,6 @@ do
     test -d "/dev/md$md" && md=$((md+1)) || mdexist="1"
 done
 
-sudo mkdir -p /dev/md${md}
 RAID_CMD="mdadm --create /dev/md$md --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $toRaid
