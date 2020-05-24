@@ -46,6 +46,7 @@ fi
 enoughDisks
 md=9
 i=0
+sudo mkdir -p /dev/md${md}
 RAID_CMD="mdadm --create /dev/md$md --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $toRaid
