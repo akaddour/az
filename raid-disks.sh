@@ -46,7 +46,7 @@ fi
 enoughDisks
 
 i=0
-RAID_CMD="mdadm --create /dev/md1 --level 0 --raid-devices "
+RAID_CMD="mdadm --create /dev/mdx --level 0 --raid-devices "
 RAID_DISKS=""
 for d in $toRaid
 do
@@ -62,6 +62,6 @@ do
     (echo n; echo p; echo 1; echo ; echo ; echo p; echo t; echo fd; echo p; echo w;) | fdisk ${disk} 
 done
 eval "$RAID_CMD"
-mkfs.ext4 /dev/md1 
+mkfs.ext4 /dev/mdx 
 sudo mkdir /mnt/raid1
 mount -a
