@@ -63,5 +63,5 @@ do
 done
 eval "$RAID_CMD"
 mkfs.ext4 /dev/md${md}
-sudo mkdir /mnt/raid1
+sudo mkdir -p /mnt/raid1
 mount -a
