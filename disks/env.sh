@@ -5,7 +5,7 @@ vmname="cs-test"
 vmsize="Standard_F4s"
 location="westeurope"
 username="apk8jpgdfm1rh9n6"
-password="ti6c6slm3db44ka3"
+password="T@i6c6slm3db44ka3"
 echo "=============== DEPLOYMENT ==============="
 az group create -l $location -n $group --output none
 
