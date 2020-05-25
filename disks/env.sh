@@ -11,8 +11,8 @@ az group create -l $location -n $group --output none
 
 for ((n=1;n<=$vms;n++))
 do 	    
-	r=$(( $RANDOM % 5 ));
-	o=$(( $RANDOM % 4));
+	r=$(( $RANDOM % 4 + 1 ));
+	o=$(( $RANDOM % 3 + 1));
 	disksraid=""
 	disksother=""
 	disks=""
