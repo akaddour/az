@@ -1,6 +1,6 @@
 #!/bin/bash
-group="cs"
-vms=10
+group="cs-rg"
+vms=5
 vmname="cs-test"
 vmsize="Standard_F4s"
 location="westeurope"
